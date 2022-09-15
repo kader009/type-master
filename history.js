@@ -8,7 +8,7 @@ function addHistory(questionText, timeTaken, errorCount) {
   <h3>${questionText}</h3>
   <div>
   <p>You took: <span class="bold">${Math.floor(timeTaken)}</span> seconds</p>
-  <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
+  <p>You made: <span class="bold red">${errorCount}</span> mistakes</p>
   </div>
   `;
 
