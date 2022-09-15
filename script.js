@@ -26,6 +26,7 @@ const typeController = (e) => {
   // Handle backspace press
   if (newLetter == "Backspace") {
     userText = userText.slice(0, userText.length - 1);
+    errorCount++;
     return display.removeChild(display.lastChild);
   }
 
@@ -108,7 +109,7 @@ const start = () => {
 
   const startCountdown = setInterval(() => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
-
+    // countdownOverlay = '';
     // finished timer
     if (count == 0) {
       // -------------- START TYPING -----------------
