@@ -152,7 +152,7 @@ button {
   width: 100%;
   height: 100%;
   padding: 50px;
-  display: flex;
+  display: grid;
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
@@ -188,6 +188,10 @@ button {
     width: 100%;
   }
   .card {
+    flex-direction: column;
+  }
+  #histories {
+    display: flex;
     flex-direction: column;
   }
 }
