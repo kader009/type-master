@@ -11,6 +11,7 @@ let errorCount = 0;
 let startTime;
 let questionText = "";
 
+
 // Load and display question
 fetch("./texts.json")
   .then((res) => res.json())
@@ -55,6 +56,7 @@ const typeController = (e) => {
   }
 };
 
+
 const validate = (key) => {
   if (key === questionText[userText.length - 1]) {
     return true;
@@ -66,6 +68,7 @@ const validate = (key) => {
 const gameOver = () => {
   document.removeEventListener("keydown", typeController);
   // the current time is the finish time
+  
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
   const timeTaken = (finishTime - startTime) / 1000;
@@ -109,7 +112,6 @@ const start = () => {
 
   const startCountdown = setInterval(() => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
-    // countdownOverlay = '';
     // finished timer
     if (count == 0) {
       // -------------- START TYPING -----------------
@@ -119,6 +121,7 @@ const start = () => {
       
       clearInterval(startCountdown);
       startTime = new Date().getTime();
+      countdownOverlay.innerHTML = '';
       countdownOverlay.style.display = 'none';
     }
 
